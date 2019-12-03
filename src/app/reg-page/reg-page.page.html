@@ -1,0 +1,69 @@
+<ion-header color="light">
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-back-button  defaultHref="second-page"></ion-back-button>
+          </ion-buttons>
+      <ion-title >Registeration</ion-title>
+      <ion-icon slot="end" class="home-icon" (click)="goToHome()" name="home"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content color="light" padding>
+    <form [formGroup]="regForm" color="light">
+        <ion-item color="light" >
+            <ion-input  formControlName="first" type="text" placeholder="Full Name"></ion-input>
+          </ion-item>
+      
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.first">
+              <div class="error-message" *ngIf="regForm.get('first').hasError(error.type)&& ((regForm.get('first').dirty) || (regForm.get('first').touched ))">
+                {{error.message}}
+              </div>
+            </ng-container>
+          </div>
+  
+          <!-- <ion-item>
+              <ion-input formControlName="last" type="text" placeholder="Last Name"></ion-input>
+            </ion-item>
+        
+            <div class="error-messages">
+              <ng-container *ngFor="let error of error_messages.last">
+                <div class="error-message" *ngIf="regForm.get('last').hasError(error.type)&& ((regForm.get('last').dirty) || (regForm.get('last').touched ))">
+                  {{error.message}}
+                </div>
+              </ng-container>
+            </div> -->
+  
+      <ion-item color="light">
+        <ion-input formControlName="place" type="text" placeholder="Place"></ion-input>
+      </ion-item>
+  
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.place">
+          <div class="error-message" *ngIf="regForm.get('place').hasError(error.type)&& ((regForm.get('place').dirty) || (regForm.get('place').touched ))">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+  
+      <ion-item color="light">
+        <ion-input formControlName="profession" type="text" placeholder="Profession"></ion-input>
+      </ion-item>
+  
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.profession">
+          <div class="error-message" *ngIf="regForm.get('profession').hasError(error.type)&&((regForm.get('profession').dirty )|| (regForm.get('profession').touched ))">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+
+
+      <ion-item>
+        <ion-input color="light" formControlName="picture" type="file"   (change)="handleFileSelect($event)" > </ion-input>
+      </ion-item>
+  
+      <ion-button (click)="register()" [disabled]="!regForm.valid" shape="round" size="default" color="primary" expand="black">Register</ion-button>
+  
+    </form>
+  </ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-toolbar color="gray">
+        <ion-row> <ion-icon class="icon" name="menu" start ></ion-icon>
+       <ion-title>Menu</ion-title> </ion-row> 
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content >
+     
+        <ion-grid >
+            <!-- <ion-row > -->
+              <!-- <ion-col size="3" offset="1" *ngFor ="let i of arr"> -->
+                  <ion-row  >
+                    <ion-col class="div1">
+                  <ion-label color="light" >
+                <ion-icon  name=person color="light" class="icon2" (click)="handleClickReg()"></ion-icon>
+                  <br>Log a Customer</ion-label>
+                </ion-col>
+              <ion-col class="div1">
+                  <ion-label color="light" >
+                      <ion-icon  name=book color="light" class="icon2" (click)="handleClickFunc()"></ion-icon>
+                        <br>List of Customers</ion-label>
+                      </ion-col>
+
+                    <ion-col class="div1">
+                   <ion-label color="light" >
+                            <ion-icon  name=chatboxes color="light" class="icon2" ></ion-icon>
+                              <br>Messaging</ion-label>
+                            </ion-col>
+                            </ion-row>
+
+                            
+
+                  <ion-row size="3" offset="1" >
+<ion-col>
+                   <ion-label color="light" >
+                                  <ion-icon  name=settings color="light" class="icon2" ></ion-icon>
+                                    <br>Settings</ion-label>
+                                  </ion-col>
+                                  <ion-col>
+
+                    <ion-label color="light" >
+                                        <ion-icon  name=list-box color="light" class="icon2" ></ion-icon>
+                                          <br>To Do List</ion-label>
+                                        </ion-col>
+                                      <ion-col>             
+                      <ion-label color="light" >
+                            <ion-icon  name=calendar color="light" class="icon2" ></ion-icon>
+                                                <br>Calendar</ion-label>
+                                              </ion-col>
+
+                  </ion-row>
+
+                  <ion-row size="2 " offset="1" >
+                    <ion-col size="2 " offset="2" >
+                                <ion-label color="light" >
+                                    <ion-icon  name=trophy color="light" class="icon2" ></ion-icon>
+                                         <br>Inventory</ion-label>
+                                        </ion-col>
+                                      <ion-col size="2 " offset="2" >
+                                         <ion-label color="light" >
+                                            <ion-icon  name=help color="light" class="icon2" ></ion-icon>
+                                                 <br>Trivia</ion-label>
+                                                </ion-col>
+                  </ion-row>
+            <!-- </ion-row> -->
+           
+            
+          </ion-grid>
+  </ion-content>

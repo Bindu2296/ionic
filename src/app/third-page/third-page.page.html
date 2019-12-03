@@ -1,0 +1,49 @@
+
+ <ion-header color="light">
+    <ion-toolbar  >
+   <!-- <ion-item> -->
+      <ion-buttons slot="start">
+        <ion-back-button  defaultHref="second-page"></ion-back-button>
+      </ion-buttons>
+      <ion-searchbar color="light" class="searchbar" placeholder="Search for friends" [(ngModel)]="searchItem" (ionChange)="setFilteredItems()"  ></ion-searchbar>
+      <ion-buttons slot="end" >    
+      <ion-icon class="home-icon" (click)="
+      goToHome()" name="home"></ion-icon>
+    </ion-buttons>
+
+      <!-- </ion-item> -->
+    </ion-toolbar>
+  </ion-header>
+  
+  
+<ion-content color="light" >
+    <ion-list color="light">
+     
+      <ion-item-sliding color="light">
+
+        <ion-item color="white" *ngFor ="let i of user" >
+            <ion-icon class="badge-icons" color={{i.color1}} name={{i.name1}}></ion-icon>
+            <!-- <ion-icon class="icons"  color="primary" name="trophy"></ion-icon> -->
+
+            <ion-avatar>
+                <img src={{i.userimg}}>
+            </ion-avatar>
+
+        <ion-col>
+
+          <ion-row><ion-label class="name-text">{{i.name}}</ion-label></ion-row>
+          <ion-row>  
+            <ion-icon class="second-icon" name={{i.name2}}></ion-icon>
+          <ion-label class="second-text">{{i.label2}}</ion-label>
+          <ion-icon class="second-icon" name={{i.name3}}></ion-icon>
+          <ion-label class="second-text">{{i.label3}}</ion-label>
+        </ion-row>
+        </ion-col> 
+        <ion-icon  color={{i.color2}} name={{i.name4}}></ion-icon>
+        <!-- <ion-icon class="icon1" color="danger" name="add-circle"></ion-icon> -->
+      </ion-item>
+
+      </ion-item-sliding>
+     
+      </ion-list>
+</ion-content>
